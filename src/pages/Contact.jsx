@@ -115,6 +115,7 @@ export default function Contact() {
                     <div>
                       <p className="font-semibold text-foreground">MindLoRA Private Limited</p>
                       <address className="mt-1 text-sm not-italic text-muted-foreground">Bargaon, Hasanpur, Samastipur,<br />Bihar 848205, India</address>
+                      <a href="/ai-recruitment-samastipur" className="mt-2 inline-block text-sm font-medium text-primary underline underline-offset-4">AI recruitment interviews in Samastipur, Bihar</a>
                     </div>
                   </div>
                   <div className="mt-5 grid grid-cols-2 gap-4 border-t border-border pt-5 text-sm">

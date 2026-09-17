@@ -20,6 +20,8 @@ export type PageHeadOptions = {
   canonicalPath?: string;
   /** Extra JSON-LD blocks. */
   schema?: unknown[];
+  /** Extra <link> tags, e.g. hreflang alternates. */
+  extraLinks?: Array<Record<string, string>>;
 };
 
 const abs = (path: string) => `${SITE_URL}${path === "/" ? "/" : path.replace(/\/$/, "")}`;
@@ -35,6 +37,7 @@ export function pageHead(options: PageHeadOptions) {
     noindex = false,
     canonicalPath,
     schema = [],
+    extraLinks = [],
   } = options;
 
   const url = abs(path);
@@ -86,7 +89,12 @@ export function pageHead(options: PageHeadOptions) {
 
   return {
     meta,
-    links: [{ rel: "canonical", href: canonical }],
+    links: [
+      { rel: "canonical", href: canonical },
+      ...extraLinks.map((link) =>
+        link.href?.startsWith("/") ? { ...link, href: abs(link.href) } : link,
+      ),
+    ],
     scripts,
   };
 }
