@@ -14,7 +14,7 @@ export default function FAQ() {
         <Button asChild size="lg" className="h-12 rounded-xl bg-gradient-primary px-6"><Link to="/contact">Contact support</Link></Button>
       </PageHero>
       <div className="container-xl pb-16">
-        <FaqAccordion items={[...faqs, ...extra]} />
+        <FaqAccordion items={[...faqs, ...extraFaqs]} />
       </div>
       <CTASection title="Still have questions?" subtitle="Book a meeting and we’ll scope the right interview workflow for your hiring team." primary={{ label: "Book a meeting", to: "/book-meeting" }} secondary={{ label: "Contact us", to: "/contact" }} />
     </>
