@@ -20,6 +20,8 @@ export type PageHeadOptions = {
   canonicalPath?: string;
   /** Extra JSON-LD blocks. */
   schema?: unknown[];
+  /** Extra <link> tags, e.g. hreflang alternates. */
+  extraLinks?: Array<Record<string, string>>;
 };
 
 const abs = (path: string) => `${SITE_URL}${path === "/" ? "/" : path.replace(/\/$/, "")}`;
