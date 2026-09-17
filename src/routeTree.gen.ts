@@ -28,9 +28,11 @@ import { Route as CodingInterviewRouteImport } from './routes/coding-interview'
 import { Route as CareerCoachRouteImport } from './routes/career-coach'
 import { Route as BookMeetingRouteImport } from './routes/book-meeting'
 import { Route as BlogRouteImport } from './routes/blog'
+import { Route as AiRecruitmentSamastipurRouteImport } from './routes/ai-recruitment-samastipur'
 import { Route as AiInterviewRouteImport } from './routes/ai-interview'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as HiAiRecruitmentSamastipurRouteImport } from './routes/hi.ai-recruitment-samastipur'
 
 const UniversitiesRoute = UniversitiesRouteImport.update({
   id: '/universities',
@@ -127,6 +129,11 @@ const BlogRoute = BlogRouteImport.update({
   path: '/blog',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AiRecruitmentSamastipurRoute = AiRecruitmentSamastipurRouteImport.update({
+  id: '/ai-recruitment-samastipur',
+  path: '/ai-recruitment-samastipur',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const AiInterviewRoute = AiInterviewRouteImport.update({
   id: '/ai-interview',
   path: '/ai-interview',
@@ -142,11 +149,18 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const HiAiRecruitmentSamastipurRoute =
+  HiAiRecruitmentSamastipurRouteImport.update({
+    id: '/hi/ai-recruitment-samastipur',
+    path: '/hi/ai-recruitment-samastipur',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/ai-interview': typeof AiInterviewRoute
+  '/ai-recruitment-samastipur': typeof AiRecruitmentSamastipurRoute
   '/blog': typeof BlogRoute
   '/book-meeting': typeof BookMeetingRoute
   '/career-coach': typeof CareerCoachRoute
@@ -166,11 +180,13 @@ export interface FileRoutesByFullPath {
   '/technical-interview': typeof TechnicalInterviewRoute
   '/terms': typeof TermsRoute
   '/universities': typeof UniversitiesRoute
+  '/hi/ai-recruitment-samastipur': typeof HiAiRecruitmentSamastipurRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/ai-interview': typeof AiInterviewRoute
+  '/ai-recruitment-samastipur': typeof AiRecruitmentSamastipurRoute
   '/blog': typeof BlogRoute
   '/book-meeting': typeof BookMeetingRoute
   '/career-coach': typeof CareerCoachRoute
@@ -190,12 +206,14 @@ export interface FileRoutesByTo {
   '/technical-interview': typeof TechnicalInterviewRoute
   '/terms': typeof TermsRoute
   '/universities': typeof UniversitiesRoute
+  '/hi/ai-recruitment-samastipur': typeof HiAiRecruitmentSamastipurRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/about': typeof AboutRoute
   '/ai-interview': typeof AiInterviewRoute
+  '/ai-recruitment-samastipur': typeof AiRecruitmentSamastipurRoute
   '/blog': typeof BlogRoute
   '/book-meeting': typeof BookMeetingRoute
   '/career-coach': typeof CareerCoachRoute
@@ -215,6 +233,7 @@ export interface FileRoutesById {
   '/technical-interview': typeof TechnicalInterviewRoute
   '/terms': typeof TermsRoute
   '/universities': typeof UniversitiesRoute
+  '/hi/ai-recruitment-samastipur': typeof HiAiRecruitmentSamastipurRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
@@ -222,6 +241,7 @@ export interface FileRouteTypes {
     | '/'
     | '/about'
     | '/ai-interview'
+    | '/ai-recruitment-samastipur'
     | '/blog'
     | '/book-meeting'
     | '/career-coach'
@@ -241,11 +261,13 @@ export interface FileRouteTypes {
     | '/technical-interview'
     | '/terms'
     | '/universities'
+    | '/hi/ai-recruitment-samastipur'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/about'
     | '/ai-interview'
+    | '/ai-recruitment-samastipur'
     | '/blog'
     | '/book-meeting'
     | '/career-coach'
@@ -265,11 +287,13 @@ export interface FileRouteTypes {
     | '/technical-interview'
     | '/terms'
     | '/universities'
+    | '/hi/ai-recruitment-samastipur'
   id:
     | '__root__'
     | '/'
     | '/about'
     | '/ai-interview'
+    | '/ai-recruitment-samastipur'
     | '/blog'
     | '/book-meeting'
     | '/career-coach'
@@ -289,12 +313,14 @@ export interface FileRouteTypes {
     | '/technical-interview'
     | '/terms'
     | '/universities'
+    | '/hi/ai-recruitment-samastipur'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AboutRoute: typeof AboutRoute
   AiInterviewRoute: typeof AiInterviewRoute
+  AiRecruitmentSamastipurRoute: typeof AiRecruitmentSamastipurRoute
   BlogRoute: typeof BlogRoute
   BookMeetingRoute: typeof BookMeetingRoute
   CareerCoachRoute: typeof CareerCoachRoute
@@ -314,6 +340,7 @@ export interface RootRouteChildren {
   TechnicalInterviewRoute: typeof TechnicalInterviewRoute
   TermsRoute: typeof TermsRoute
   UniversitiesRoute: typeof UniversitiesRoute
+  HiAiRecruitmentSamastipurRoute: typeof HiAiRecruitmentSamastipurRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -451,6 +478,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof BlogRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/ai-recruitment-samastipur': {
+      id: '/ai-recruitment-samastipur'
+      path: '/ai-recruitment-samastipur'
+      fullPath: '/ai-recruitment-samastipur'
+      preLoaderRoute: typeof AiRecruitmentSamastipurRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/ai-interview': {
       id: '/ai-interview'
       path: '/ai-interview'
@@ -472,6 +506,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/hi/ai-recruitment-samastipur': {
+      id: '/hi/ai-recruitment-samastipur'
+      path: '/hi/ai-recruitment-samastipur'
+      fullPath: '/hi/ai-recruitment-samastipur'
+      preLoaderRoute: typeof HiAiRecruitmentSamastipurRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -479,6 +520,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AboutRoute: AboutRoute,
   AiInterviewRoute: AiInterviewRoute,
+  AiRecruitmentSamastipurRoute: AiRecruitmentSamastipurRoute,
   BlogRoute: BlogRoute,
   BookMeetingRoute: BookMeetingRoute,
   CareerCoachRoute: CareerCoachRoute,
@@ -498,6 +540,7 @@ const rootRouteChildren: RootRouteChildren = {
   TechnicalInterviewRoute: TechnicalInterviewRoute,
   TermsRoute: TermsRoute,
   UniversitiesRoute: UniversitiesRoute,
+  HiAiRecruitmentSamastipurRoute: HiAiRecruitmentSamastipurRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
