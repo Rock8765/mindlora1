@@ -15,7 +15,7 @@ const values = [
 ];
 
 const milestones = [
-  { year: "2025", title: "Mindlora was founded", desc: "We started with one question: why should skilled recruiters spend most of their week repeating first-round interviews?" },
+  { year: "2021", title: "MindLoRA Private Limited incorporated", desc: "The company was registered with the Registrar of Companies, Guwahati, with a focus on practical hiring technology." },
   { year: "2025", title: "The first hiring workflow", desc: "We connected requirement intake, adaptive AI interviews, coding evaluation, and evidence-backed scorecards." },
   { year: "2026", title: "Generally available", desc: "Mindlora now supports startups, staffing agencies, enterprise talent teams, and campus recruiters across India." },
   { year: "Today", title: "Built around hiring companies", desc: "We remain focused on the practical needs of Indian recruiters, hiring managers, agencies, and campus teams." },
@@ -25,13 +25,13 @@ export default function About() {
   return (
     <>
       <SEO title="About" description="Mindlora is a self-funded Indian recruitment company that conducts AI-led candidate interviews for hiring teams." />
-      <PageHero eyebrow="Our story" title="We give hiring teams their screening time back" subtitle="Founded in 2025, Mindlora conducts first-round and technical interviews for companies hiring across India." />
-      <div className="container-xl pb-4"><address className="mx-auto max-w-xl text-center text-sm not-italic leading-relaxed text-muted-foreground"><strong className="text-foreground">MindLoRA Private Limited</strong><br />Bargaon, Hasanpur, Samastipur, Bihar 848205, India</address></div>
+      <PageHero eyebrow="Our story" title="We give hiring teams their screening time back" subtitle="Incorporated in 2021, Mindlora conducts first-round and technical interviews for companies hiring across India." />
+      <div className="container-xl pb-4"><address className="mx-auto max-w-xl text-center text-sm not-italic leading-relaxed text-muted-foreground"><strong className="text-foreground">MindLoRA Private Limited</strong><br />House no. 386, 2nd floor, Sixmile Mahapurush Madhabdev path, Bormotoria, Kamrup, Assam 781022, India<br />CIN: U85110AS2021PTC022211 · Incorporated 18 November 2021 · RoC Guwahati</address></div>
 
       <section className="py-8">
         <div className="container-xl">
           <div className="grid gap-6 rounded-3xl border border-border bg-card p-8 shadow-xs sm:grid-cols-2 lg:grid-cols-4">
-            {[{ v: 3500, s: "+", d: "Candidate interviews" }, { v: 40, s: "+", d: "Hiring companies" }, { v: 6, s: "", d: "Cities across India" }, { v: 2025, s: "", d: "Founded" }].map((x) => (
+            {[{ v: 3500, s: "+", d: "Candidate interviews" }, { v: 40, s: "+", d: "Hiring companies" }, { v: 6, s: "", d: "Cities across India" }, { v: 2021, s: "", d: "Incorporated" }].map((x) => (
               <div key={x.d} className="text-center">
                 <p className="font-display text-3xl font-bold text-primary sm:text-4xl"><AnimatedCounter value={x.v} suffix={x.s} decimals={x.dec || 0} /></p>
                 <p className="mt-1 text-sm text-muted-foreground">{x.d}</p>

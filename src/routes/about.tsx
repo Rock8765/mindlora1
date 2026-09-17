@@ -10,7 +10,7 @@ export const Route = createFileRoute("/about")({
       path: "/about",
       title: "About MindLoRA Private Limited | Our Team",
       description:
-        "Meet MindLoRA Private Limited, the Bihar-based team helping Indian hiring teams outsource structured candidate screening and technical interviews.",
+        "Meet MindLoRA Private Limited, the Assam-registered company helping Indian hiring teams outsource structured candidate screening and technical interviews.",
       image: "about",
       breadcrumbs: [{ name: "About", path: "/about" }],
       schema: [localBusinessSchema],

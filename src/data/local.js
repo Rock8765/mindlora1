@@ -2,7 +2,7 @@ export const samastipurEn = {
   eyebrow: "Samastipur, Bihar",
   h1: "AI Recruitment Interview Platform in Samastipur, Bihar",
   intro:
-    "Mindlora is built and run from Samastipur, Bihar. Our AI conducts HR, technical and coding interviews for hiring teams across India and returns scored, ranked shortlists.",
+    "Mindlora conducts AI HR, technical and coding interviews for hiring teams in Samastipur, across Bihar and throughout India, returning scored, ranked shortlists.",
   switchPrefix: "यह पेज हिंदी में भी उपलब्ध है:",
   whoTitle: "Who we work with in and around Samastipur",
   who: [
@@ -19,14 +19,14 @@ export const samastipurEn = {
     "You get scorecards, recordings and a ranked shortlist of who to meet next.",
   ],
   addressTitle: "Our registered office",
-  address: "Bargaon, Hasanpur, Samastipur, Bihar 848205, India",
+  address: "House no. 386, 2nd floor, Sixmile Mahapurush Madhabdev path, Bormotoria, Kamrup, Assam 781022, India",
   addressNote:
     "This is our registered office and is not set up for walk-in visits. We work with hiring teams remotely across India — book a meeting and we will call you.",
   faqTitle: "Questions from hiring teams in Bihar",
   faqs: [
     {
       q: "Do you only work with companies in Samastipur?",
-      a: "No. Samastipur is where MindLoRA Private Limited is registered. We run candidate screening for hiring teams anywhere in India.",
+      a: "No. We run candidate screening for hiring teams anywhere in India, including Samastipur and the rest of Bihar.",
     },
     {
       q: "Can candidates be interviewed in Hindi?",
@@ -51,7 +51,7 @@ export const samastipurHi = {
   eyebrow: "समस्तीपुर, बिहार",
   h1: "समस्तीपुर, बिहार में एआई भर्ती इंटरव्यू प्लेटफ़ॉर्म",
   intro:
-    "माइंडलोरा समस्तीपुर, बिहार से संचालित होता है। हमारा एआई आपकी ओर से एचआर, तकनीकी और कोडिंग इंटरव्यू लेता है और स्कोर के साथ चुनी हुई शॉर्टलिस्ट देता है।",
+    "माइंडलोरा समस्तीपुर, बिहार और पूरे भारत की भर्ती टीमों के लिए एचआर, तकनीकी और कोडिंग इंटरव्यू लेता है और स्कोर के साथ चुनी हुई शॉर्टलिस्ट देता है।",
   switchPrefix: "This page is also available in English:",
   whoTitle: "समस्तीपुर और आसपास हम किनके साथ काम करते हैं",
   who: [
@@ -68,14 +68,14 @@ export const samastipurHi = {
     "आपको स्कोरकार्ड, रिकॉर्डिंग और रैंक की हुई शॉर्टलिस्ट मिलती है।",
   ],
   addressTitle: "हमारा पंजीकृत कार्यालय",
-  address: "बरगांव, हसनपुर, समस्तीपुर, बिहार 848205, भारत",
+  address: "हाउस नं. 386, दूसरी मंज़िल, सिक्समाइल महापुरुष माधवदेव पथ, बोरमोटोरिया, कामरूप, असम 781022, भारत",
   addressNote:
     "यह हमारा पंजीकृत पता है, यहाँ आगंतुकों के आने की व्यवस्था नहीं है। हम पूरे भारत की भर्ती टीमों के साथ ऑनलाइन काम करते हैं — मीटिंग बुक कीजिए, हम आपसे संपर्क करेंगे।",
   faqTitle: "बिहार की भर्ती टीमों के आम सवाल",
   faqs: [
     {
       q: "क्या आप केवल समस्तीपुर की कंपनियों के साथ काम करते हैं?",
-      a: "नहीं। समस्तीपुर में माइंडलोरा प्राइवेट लिमिटेड पंजीकृत है। हम पूरे भारत की भर्ती टीमों के लिए स्क्रीनिंग करते हैं।",
+      a: "नहीं। हम पूरे भारत की भर्ती टीमों के लिए स्क्रीनिंग करते हैं, जिनमें समस्तीपुर और पूरा बिहार शामिल है।",
     },
     {
       q: "क्या इंटरव्यू हिंदी में हो सकते हैं?",

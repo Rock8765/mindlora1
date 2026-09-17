@@ -122,10 +122,12 @@ export const localBusinessSchema = {
   areaServed: { "@type": "Country", name: "India" },
   address: {
     "@type": "PostalAddress",
-    streetAddress: "Bargaon, Hasanpur",
-    addressLocality: "Samastipur",
-    postalCode: "848205",
-    addressRegion: "Bihar",
+    streetAddress: "House no. 386, 2nd floor, Sixmile Mahapurush Madhabdev path, Bormotoria",
+    addressLocality: "Kamrup",
+    addressRegion: "Assam",
+    postalCode: "781022",
     addressCountry: "IN",
   },
+  foundingDate: "2021-11-18",
+  identifier: { "@type": "PropertyValue", name: "CIN", value: "U85110AS2021PTC022211" },
 };
