@@ -65,7 +65,7 @@ export default function LocalCity({ copy, altHref, altLabel }) {
               </span>
               <h2 className="mt-4 font-display text-2xl font-semibold text-foreground">{copy.addressTitle}</h2>
               <address className="mt-2 not-italic text-sm text-muted-foreground">
-                MindLoRA Private Limited
+                Mindlora Private Limited
                 <br />
                 {copy.address}
               </address>

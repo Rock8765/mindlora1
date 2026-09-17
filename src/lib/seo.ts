@@ -112,7 +112,7 @@ export const faqSchema = (items: Array<{ q: string; a: string }>) => ({
 export const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
-  name: "MindLoRA Private Limited",
+  name: "Mindlora Private Limited",
   alternateName: "Mindlora",
   url: SITE_URL,
   logo: `${SITE_URL}/mindlora-logo.png`,
