@@ -62,3 +62,9 @@ export const articles = [
   { category: "Campus Hiring", title: "Running high-volume campus screening with one hiring bar", excerpt: "How talent teams can evaluate large applicant groups without adding repetitive recruiter calls.", read: "5 min read", date: "Feb 03, 2026", image: "/mindlora-logo.png" },
 ];
 
+
+export const extraFaqs = [
+  { q: "Which roles can Mindlora interview for?", a: "Mindlora supports tech and non-tech hiring, including individual roles, agency pipelines, mass hiring, and campus recruitment drives." },
+  { q: "Which languages are supported?", a: "HR screening is available in English and Hindi. Additional Indian languages will be added after validation with hiring teams." },
+  { q: "How are candidates invited?", a: "Your team can invite candidates individually or upload them in bulk. Each candidate receives a secure interview link and completion instructions." },
+];

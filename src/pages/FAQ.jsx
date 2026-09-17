@@ -4,13 +4,7 @@ import { PageHero } from "@/components/common/PageHero";
 import { FaqAccordion } from "@/components/sections/FaqAccordion";
 import { CTASection } from "@/components/sections/CTASection";
 import { Button } from "@/components/ui/button";
-import { faqs } from "@/data/content";
-
-const extra = [
-  { q: "Which roles can Mindlora interview for?", a: "Mindlora supports tech and non-tech hiring, including individual roles, agency pipelines, mass hiring, and campus recruitment drives." },
-  { q: "Which languages are supported?", a: "HR screening is available in English and Hindi. Additional Indian languages will be added after validation with hiring teams." },
-  { q: "How are candidates invited?", a: "Your team can invite candidates individually or upload them in bulk. Each candidate receives a secure interview link and completion instructions." },
-];
+import { faqs, extraFaqs } from "@/data/content";
 
 export default function FAQ() {
   return (
