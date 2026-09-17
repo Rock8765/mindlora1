@@ -19,11 +19,11 @@ export default function Footer4() {
             <h3 className="font-display text-xl font-bold">Let AI run your first-round interviews.</h3>
             <div className="space-y-2 text-sm text-background/75">
               <a href="mailto:info@mindlora.com" className="flex items-center gap-2 hover:text-background"><Mail className="h-4 w-4" /> info@mindlora.com</a>
-               <div className="flex items-start gap-2"><MapPin className="mt-0.5 h-4 w-4 shrink-0" /><address className="not-italic">MindLoRA Private Limited<br />House no. 386, 2nd floor, Sixmile Mahapurush Madhabdev path,<br />Bormotoria, Kamrup, Assam 781022, India</address></div>
+               <div className="flex items-start gap-2"><MapPin className="mt-0.5 h-4 w-4 shrink-0" /><address className="not-italic">Mindlora Private Limited<br />House no. 386, 2nd floor, Sixmile Mahapurush Madhabdev path,<br />Bormotoria, Kamrup, Assam 781022, India</address></div>
                <Link to="/book-meeting" className="inline-flex items-center gap-2 font-semibold text-background">Get Quotation <ArrowRight className="h-4 w-4" /></Link>
              </div>
              <p className="text-xs text-background/60">CIN: U85110AS2021PTC022211 · Incorporated 18 November 2021 · RoC Guwahati</p>
-             <p className="text-xs text-background/60">© 2026 MindLoRA Private Limited. All rights reserved.</p>
+             <p className="text-xs text-background/60">© 2026 Mindlora Private Limited. All rights reserved.</p>
           </div>
         </motion.div>
         <motion.div initial="hidden" whileInView="visible" viewport={{ once: true }} variants={item} className="flex min-h-[430px] w-full flex-col justify-between rounded-[1.75rem] border border-border bg-card p-8 md:w-2/3 md:p-12">

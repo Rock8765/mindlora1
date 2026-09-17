@@ -8,9 +8,9 @@ export const Route = createFileRoute("/about")({
   head: () =>
     pageHead({
       path: "/about",
-      title: "About MindLoRA Private Limited | Our Team",
+      title: "About Mindlora Private Limited | Our Team",
       description:
-        "Meet MindLoRA Private Limited, the Assam-registered company helping Indian hiring teams outsource structured candidate screening and technical interviews.",
+        "Meet Mindlora Private Limited, the Assam-registered company helping Indian hiring teams outsource structured candidate screening and technical interviews.",
       image: "about",
       breadcrumbs: [{ name: "About", path: "/about" }],
       schema: [localBusinessSchema],
