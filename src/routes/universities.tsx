@@ -1,21 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 // @ts-ignore
 import Universities from "@/pages/Universities";
+import { pageHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/universities")({
   component: Universities,
-  head: () => ({
-    meta: [
-      { title: "Campus Hiring Interviews — Mindlora" },
-      { name: "description", content: "Run consistent, high-volume campus hiring interviews and receive evidence-backed candidate shortlists." },
-      { property: "og:title", content: "Campus Hiring Interviews — Mindlora" },
-      { property: "og:description", content: "Run consistent, high-volume campus hiring interviews and receive evidence-backed candidate shortlists." },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://mindlora.com/universities" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:title", content: "Campus Hiring Interviews — Mindlora" },
-      { name: "twitter:description", content: "Run consistent, high-volume campus hiring interviews and receive evidence-backed candidate shortlists." },
-    ],
-    links: [{ rel: "canonical", href: "https://mindlora.com/universities" }],
-  }),
+  head: () =>
+    pageHead({
+      path: "/universities",
+      title: "Campus Hiring & Bulk AI Screening India | Mindlora",
+      description: "Run campus drives without extra screening headcount. Mindlora interviews every student, scores them against your bar and returns ranked shortlists fast.",
+      image: "products",
+      breadcrumbs: [{"name":"Campus Hiring","path":"/universities"}],
+    }),
 });
