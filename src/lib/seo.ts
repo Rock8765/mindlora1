@@ -1,4 +1,4 @@
-export const SITE_URL = "https://mindlora.com";
+export const SITE_URL = "https://happy-redeploy.lovable.app";
 
 export type Crumb = { name: string; path: string };
 
