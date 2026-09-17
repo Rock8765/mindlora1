@@ -2,7 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 // @ts-ignore
 import Features from "@/pages/Features";
 import { pageHead } from "@/lib/seo";
-import { pageHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/features")({
   component: Features,

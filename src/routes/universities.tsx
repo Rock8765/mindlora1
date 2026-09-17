@@ -2,7 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 // @ts-ignore
 import Universities from "@/pages/Universities";
 import { pageHead } from "@/lib/seo";
-import { pageHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/universities")({
   component: Universities,
