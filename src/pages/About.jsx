@@ -26,7 +26,7 @@ export default function About() {
     <>
       <SEO title="About" description="Mindlora is a self-funded Indian recruitment company that conducts AI-led candidate interviews for hiring teams." />
       <PageHero eyebrow="Our story" title="We give hiring teams their screening time back" subtitle="Incorporated in 2021, Mindlora conducts first-round and technical interviews for companies hiring across India." />
-      <div className="container-xl pb-4"><address className="mx-auto max-w-xl text-center text-sm not-italic leading-relaxed text-muted-foreground"><strong className="text-foreground">Mindlora Private Limited</strong><br />House no. 386, 2nd floor, Sixmile Mahapurush Madhabdev path, Bormotoria, Kamrup, Assam 781022, India<br />CIN: U85110AS2021PTC022211 · Incorporated 18 November 2021 · RoC Guwahati</address></div>
+      <div className="container-xl pb-4"><address className="mx-auto max-w-xl text-center text-sm not-italic leading-relaxed text-muted-foreground"><strong className="text-foreground">Mindlora Private Limited</strong><br />House no. 386, 2nd floor, Sixmile Mahapurush Madhabdev path, Bormotoria, Kamrup, Assam 781022, India</address></div>
 
       <section className="py-8">
         <div className="container-xl">
