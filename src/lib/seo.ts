@@ -37,6 +37,7 @@ export function pageHead(options: PageHeadOptions) {
     noindex = false,
     canonicalPath,
     schema = [],
+    extraLinks = [],
   } = options;
 
   const url = abs(path);
@@ -88,7 +89,12 @@ export function pageHead(options: PageHeadOptions) {
 
   return {
     meta,
-    links: [{ rel: "canonical", href: canonical }],
+    links: [
+      { rel: "canonical", href: canonical },
+      ...extraLinks.map((link) =>
+        link.href?.startsWith("/") ? { ...link, href: abs(link.href) } : link,
+      ),
+    ],
     scripts,
   };
 }
