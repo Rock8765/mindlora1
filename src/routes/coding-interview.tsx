@@ -1,21 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 // @ts-ignore
 import FeaturePage from "@/pages/FeaturePage";
+import { pageHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/coding-interview")({
   component: () => <FeaturePage slug="coding-interview" />,
-  head: () => ({
-    meta: [
-      { title: "AI Coding Interviews — Mindlora" },
-      { name: "description", content: "Run role-specific coding interviews with live exercises, automated tests, and evidence-backed scoring." },
-      { property: "og:title", content: "AI Coding Interviews — Mindlora" },
-      { property: "og:description", content: "Run role-specific coding interviews with live exercises, automated tests, and evidence-backed scoring." },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://mindlora.com/coding-interview" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:title", content: "AI Coding Interviews — Mindlora" },
-      { name: "twitter:description", content: "Run role-specific coding interviews with live exercises, automated tests, and evidence-backed scoring." },
-    ],
-    links: [{ rel: "canonical", href: "https://mindlora.com/coding-interview" }],
-  }),
+  head: () =>
+    pageHead({
+      path: "/coding-interview",
+      title: "AI Coding Interview Platform for Companies | Mindlora",
+      description: "Run live AI coding interviews with instant review of correctness, complexity and reasoning, giving evidence-backed results for every applicant screened.",
+      image: "features",
+      breadcrumbs: [{"name":"Products","path":"/products"},{"name":"Coding Interview","path":"/coding-interview"}],
+    }),
 });

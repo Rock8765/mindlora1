@@ -1,21 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 // @ts-ignore
 import FeaturePage from "@/pages/FeaturePage";
+import { pageHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/career-coach")({
   component: () => <FeaturePage slug="career-coach" />,
-  head: () => ({
-    meta: [
-      { title: "Ranked Candidate Shortlisting — Mindlora" },
-      { name: "description", content: "Rank candidates against your approved role rubric and inspect the evidence behind every result." },
-      { property: "og:title", content: "Ranked Candidate Shortlisting — Mindlora" },
-      { property: "og:description", content: "Rank candidates against your approved role rubric and inspect the evidence behind every result." },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://mindlora.com/career-coach" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:title", content: "Ranked Candidate Shortlisting — Mindlora" },
-      { name: "twitter:description", content: "Rank candidates against your approved role rubric and inspect the evidence behind every result." },
-    ],
-    links: [{ rel: "canonical", href: "https://mindlora.com/career-coach" }],
-  }),
+  head: () =>
+    pageHead({
+      path: "/career-coach",
+      title: "AI Candidate Shortlisting for Hiring Teams | Mindlora",
+      description: "Compare every interviewed candidate against one hiring bar and get a ranked shortlist backed by scorecards, transcripts and clear role-fit evidence.",
+      image: "products",
+      breadcrumbs: [{"name":"Products","path":"/products"},{"name":"Ranked Shortlisting","path":"/career-coach"}],
+    }),
 });

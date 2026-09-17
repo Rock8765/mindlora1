@@ -1,21 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 // @ts-ignore
 import FeaturePage from "@/pages/FeaturePage";
+import { pageHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/ai-interview")({
   component: () => <FeaturePage slug="ai-interview" />,
-  head: () => ({
-    meta: [
-      { title: "AI HR Screening — Mindlora" },
-      { name: "description", content: "Conduct consistent behavioral and HR screening rounds with adaptive questions and evidence-backed scorecards." },
-      { property: "og:title", content: "AI HR Screening — Mindlora" },
-      { property: "og:description", content: "Conduct consistent behavioral and HR screening rounds with adaptive questions and evidence-backed scorecards." },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://mindlora.com/ai-interview" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:title", content: "AI HR Screening — Mindlora" },
-      { name: "twitter:description", content: "Conduct consistent behavioral and HR screening rounds with adaptive questions and evidence-backed scorecards." },
-    ],
-    links: [{ rel: "canonical", href: "https://mindlora.com/ai-interview" }],
-  }),
+  head: () =>
+    pageHead({
+      path: "/ai-interview",
+      title: "AI HR Interview Screening in India | Mindlora",
+      description: "Mindlora's AI HR interview screening asks adaptive behavioural and culture-fit questions, then scores every candidate against your approved hiring bar.",
+      image: "features",
+      breadcrumbs: [{"name":"Products","path":"/products"},{"name":"AI HR Screening","path":"/ai-interview"}],
+    }),
 });

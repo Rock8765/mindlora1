@@ -1,21 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 // @ts-ignore
 import Terms from "@/pages/Terms";
+import { pageHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/terms")({
   component: Terms,
-  head: () => ({
-    meta: [
-      { title: "Mindlora Terms of Service — Mindlora" },
-      { name: "description", content: "Terms governing Mindlora organization accounts, platform access, billing, and acceptable use." },
-      { property: "og:title", content: "Mindlora Terms of Service — Mindlora" },
-      { property: "og:description", content: "Terms governing Mindlora organization accounts, platform access, billing, and acceptable use." },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://mindlora.com/terms" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:title", content: "Mindlora Terms of Service — Mindlora" },
-      { name: "twitter:description", content: "Terms governing Mindlora organization accounts, platform access, billing, and acceptable use." },
-    ],
-    links: [{ rel: "canonical", href: "https://mindlora.com/terms" }],
-  }),
+  head: () =>
+    pageHead({
+      path: "/terms",
+      title: "Terms of Service for Hiring Teams | Mindlora",
+      description: "The terms governing Mindlora organisation accounts, interview delivery, platform access, billing, confidentiality and acceptable use across India.",
+      image: "about",
+      breadcrumbs: [{"name":"Terms of Service","path":"/terms"}],
+    }),
 });

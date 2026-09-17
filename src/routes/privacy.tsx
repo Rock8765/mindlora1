@@ -1,21 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 // @ts-ignore
 import Privacy from "@/pages/Privacy";
+import { pageHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/privacy")({
   component: Privacy,
-  head: () => ({
-    meta: [
-      { title: "Mindlora Privacy Policy — Mindlora" },
-      { name: "description", content: "Learn how Mindlora protects hiring organization and candidate data, including security and data-control practices." },
-      { property: "og:title", content: "Mindlora Privacy Policy — Mindlora" },
-      { property: "og:description", content: "Learn how Mindlora protects hiring organization and candidate data, including security and data-control practices." },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://mindlora.com/privacy" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:title", content: "Mindlora Privacy Policy — Mindlora" },
-      { name: "twitter:description", content: "Learn how Mindlora protects hiring organization and candidate data, including security and data-control practices." },
-    ],
-    links: [{ rel: "canonical", href: "https://mindlora.com/privacy" }],
-  }),
+  head: () =>
+    pageHead({
+      path: "/privacy",
+      title: "Privacy Policy & Candidate Data Use | Mindlora",
+      description: "How Mindlora collects, stores and protects hiring organisation and candidate data, including India data residency, access controls and retention rules.",
+      image: "about",
+      breadcrumbs: [{"name":"Privacy Policy","path":"/privacy"}],
+    }),
 });

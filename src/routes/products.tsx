@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 // @ts-ignore
 import Products from "@/pages/Products";
 import { pageHead } from "@/lib/seo";
+import { pageHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/products")({
   component: Products,
