@@ -65,7 +65,7 @@ export default function About() {
             <div className="absolute left-4 top-0 h-full w-px bg-border" />
             <div className="space-y-8">
               {milestones.map((m, i) => (
-                <Reveal key={m.year} delay={i * 0.05}>
+                <Reveal key={`${m.year}-${i}`} delay={i * 0.05}>
                   <div className="relative pl-12">
                     <span className="absolute left-0 top-1 flex h-8 w-8 -translate-x-1/2 items-center justify-center rounded-full bg-gradient-primary text-[11px] font-bold text-primary-foreground shadow-glow">{i + 1}</span>
                     <p className="text-sm font-semibold text-primary">{m.year}</p>
