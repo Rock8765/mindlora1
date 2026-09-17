@@ -114,7 +114,7 @@ export default function Contact() {
                     <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary"><MapPin className="h-5 w-5" /></span>
                     <div>
                       <p className="font-semibold text-foreground">MindLoRA Private Limited</p>
-                      <address className="mt-1 text-sm not-italic text-muted-foreground">Bargaon, Hasanpur, Samastipur,<br />Bihar 848205, India</address>
+                      <address className="mt-1 text-sm not-italic text-muted-foreground">House no. 386, 2nd floor, Sixmile Mahapurush<br />Madhabdev path, Bormotoria, Kamrup, Assam 781022, India</address>
                       <a href="/ai-recruitment-samastipur" className="mt-2 inline-block text-sm font-medium text-primary underline underline-offset-4">AI recruitment interviews in Samastipur, Bihar</a>
                     </div>
                   </div>
