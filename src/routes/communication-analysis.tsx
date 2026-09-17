@@ -1,21 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 // @ts-ignore
 import FeaturePage from "@/pages/FeaturePage";
+import { pageHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/communication-analysis")({
   component: () => <FeaturePage slug="communication-analysis" />,
-  head: () => ({
-    meta: [
-      { title: "Candidate Communication Analysis — Mindlora" },
-      { name: "description", content: "Assess candidate clarity, structure, relevance, and delivery alongside role-specific interview evidence." },
-      { property: "og:title", content: "Candidate Communication Analysis — Mindlora" },
-      { property: "og:description", content: "Assess candidate clarity, structure, relevance, and delivery alongside role-specific interview evidence." },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://mindlora.com/communication-analysis" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:title", content: "Candidate Communication Analysis — Mindlora" },
-      { name: "twitter:description", content: "Assess candidate clarity, structure, relevance, and delivery alongside role-specific interview evidence." },
-    ],
-    links: [{ rel: "canonical", href: "https://mindlora.com/communication-analysis" }],
-  }),
+  head: () =>
+    pageHead({
+      path: "/communication-analysis",
+      title: "AI Communication Assessment for Hiring | Mindlora",
+      description: "Measure clarity, structure, pace and evidence in every candidate answer, with communication scores your recruiters can defend to hiring managers.",
+      image: "features",
+      breadcrumbs: [{"name":"Products","path":"/products"},{"name":"Communication Assessment","path":"/communication-analysis"}],
+    }),
 });

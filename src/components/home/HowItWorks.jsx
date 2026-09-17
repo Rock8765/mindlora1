@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "@tanstack/react-router";
 import { SectionHeading } from "@/components/common/SectionHeading";
 import { Icon } from "@/components/common/Icon";
 import { howItWorks } from "@/data/content";
@@ -40,6 +41,14 @@ export const HowItWorks = () => (
           ))}
         </div>
       </div>
+
+      <p className="mt-10 text-sm text-muted-foreground">
+        Want this workflow mapped to your roles?{" "}
+        <Link to="/book-meeting" className="font-semibold text-primary underline-offset-4 hover:underline">
+          Book a meeting for a hiring quotation
+        </Link>
+        .
+      </p>
     </div>
   </section>
 );

@@ -1,22 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 // @ts-ignore
 import Login from "@/pages/Login";
+import { pageHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/login")({
-
   component: Login,
-  head: () => ({
-    meta: [
-      { title: "Sign in to Mindlora — Mindlora" },
-      { name: "description", content: "Securely sign in to your Mindlora organization workspace." },
-      { property: "og:title", content: "Sign in to Mindlora — Mindlora" },
-      { property: "og:description", content: "Securely sign in to your Mindlora organization workspace." },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://mindlora.com/login" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:title", content: "Sign in to Mindlora — Mindlora" },
-      { name: "twitter:description", content: "Securely sign in to your Mindlora organization workspace." },
-    ],
-    links: [{ rel: "canonical", href: "https://mindlora.com/login" }],
-  }),
+  head: () =>
+    pageHead({
+      path: "/login",
+      noindex: true,
+      title: "Sign in to Mindlora",
+      description: "Securely sign in to your Mindlora organisation workspace.",
+      image: "home",
+    }),
 });

@@ -1,22 +1,16 @@
 import { createFileRoute } from "@tanstack/react-router";
 // @ts-ignore
 import BookMeeting from "@/pages/BookMeeting";
+import { pageHead } from "@/lib/seo";
 
 export const Route = createFileRoute("/book-meeting")({
-
   component: BookMeeting,
-  head: () => ({
-    meta: [
-      { title: "Get a Hiring Interview Quotation — Mindlora" },
-      { name: "description", content: "Book a meeting for a quotation tailored to your roles, interview volume, and screening depth." },
-      { property: "og:title", content: "Get a Hiring Interview Quotation — Mindlora" },
-      { property: "og:description", content: "Book a meeting for a quotation tailored to your roles, interview volume, and screening depth." },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: "https://mindlora.com/book-meeting" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:title", content: "Get a Hiring Interview Quotation — Mindlora" },
-      { name: "twitter:description", content: "Book a meeting for a quotation tailored to your roles, interview volume, and screening depth." },
-    ],
-    links: [{ rel: "canonical", href: "https://mindlora.com/book-meeting" }],
-  }),
+  head: () =>
+    pageHead({
+      path: "/book-meeting",
+      title: "Book a Meeting — Get a Hiring Quotation | Mindlora",
+      description: "Book a meeting with Mindlora for a custom quotation based on your roles, interview volume and screening depth. Quotation shared within 24 hours.",
+      image: "book-meeting",
+      breadcrumbs: [{"name":"Book a Meeting","path":"/book-meeting"}],
+    }),
 });
