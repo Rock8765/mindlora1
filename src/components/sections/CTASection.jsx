@@ -16,16 +16,33 @@ export const CTASection = ({
         <div className="relative overflow-hidden rounded-[2rem] border border-border bg-gradient-primary px-6 py-16 text-center shadow-elegant sm:px-16">
           <div className="pointer-events-none absolute inset-0 bg-dots opacity-20" />
           <div className="relative mx-auto max-w-2xl">
-            <span className="inline-flex items-center gap-2 rounded-full bg-white/15 px-3.5 py-1.5 text-xs font-semibold text-primary-foreground"><Sparkles className="h-3.5 w-3.5" /> Built for organizations</span>
-            <h2 className="mt-5 font-display text-3xl font-bold leading-tight text-primary-foreground sm:text-4xl lg:text-5xl">{title}</h2>
-            <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-primary-foreground/85 sm:text-lg">{subtitle}</p>
+            <span className="inline-flex items-center gap-2 rounded-full bg-white/15 px-3.5 py-1.5 text-xs font-semibold text-primary-foreground">
+              <Sparkles className="h-3.5 w-3.5" /> Built for organizations
+            </span>
+            <h2 className="mt-5 font-display text-3xl font-bold leading-tight text-primary-foreground sm:text-4xl lg:text-5xl">
+              {title}
+            </h2>
+            <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-primary-foreground/85 sm:text-lg">
+              {subtitle}
+            </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
               <MagneticButton>
-                <Button asChild size="lg" className="h-12 rounded-xl bg-background px-6 text-base text-primary hover:bg-background/90">
-                  <Link to={primary.to}>{primary.label} <ArrowRight className="h-4 w-4" /></Link>
+                <Button
+                  asChild
+                  size="lg"
+                  className="h-12 rounded-xl bg-background px-6 text-base text-primary hover:bg-background/90"
+                >
+                  <Link to={primary.to}>
+                    {primary.label} <ArrowRight className="h-4 w-4" />
+                  </Link>
                 </Button>
               </MagneticButton>
-              <Button asChild size="lg" variant="outline" className="h-12 rounded-xl border-white/40 bg-white/10 px-6 text-base text-primary-foreground hover:bg-white/20 hover:text-primary-foreground">
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="h-12 rounded-xl border-white/40 bg-white/10 px-6 text-base text-primary-foreground hover:bg-white/20 hover:text-primary-foreground"
+              >
                 <Link to={secondary.to}>{secondary.label}</Link>
               </Button>
             </div>

@@ -1,7 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 import { useInView, useReducedMotion } from "framer-motion";
 
-export const AnimatedCounter = ({ value, duration = 1800, prefix = "", suffix = "", decimals = 0 }) => {
+export const AnimatedCounter = ({
+  value,
+  duration = 1800,
+  prefix = "",
+  suffix = "",
+  decimals = 0,
+}) => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-40px" });
   const reducedMotion = useReducedMotion();
@@ -20,6 +26,16 @@ export const AnimatedCounter = ({ value, duration = 1800, prefix = "", suffix = 
     return () => cancelAnimationFrame(raf);
   }, [inView, reducedMotion, value, duration]);
 
-  const format = (number) => number.toLocaleString("en-IN", { minimumFractionDigits: decimals, maximumFractionDigits: decimals });
-  return <span ref={ref} className="tabular-nums" aria-label={`${prefix}${format(value)}${suffix}`}>{prefix}{format(display)}{suffix}</span>;
+  const format = (number) =>
+    number.toLocaleString("en-IN", {
+      minimumFractionDigits: decimals,
+      maximumFractionDigits: decimals,
+    });
+  return (
+    <span ref={ref} className="tabular-nums" aria-label={`${prefix}${format(value)}${suffix}`}>
+      {prefix}
+      {format(display)}
+      {suffix}
+    </span>
+  );
 };

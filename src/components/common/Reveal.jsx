@@ -27,7 +27,10 @@ export const StaggerGroup = ({ children, className = "", delayChildren = 0, stag
 export const StaggerItem = ({ children, className = "", y = 22 }) => (
   <motion.div
     className={className}
-    variants={{ hidden: { opacity: 0, y }, show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] } } }}
+    variants={{
+      hidden: { opacity: 0, y },
+      show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] } },
+    }}
   >
     {children}
   </motion.div>

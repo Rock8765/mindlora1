@@ -9,7 +9,9 @@ export const StatsBand = () => (
         <div className="pointer-events-none absolute inset-0 bg-dots opacity-20" />
         <div className="pointer-events-none absolute -right-16 -top-16 h-64 w-64 rounded-full bg-white/10 blur-2xl" />
         <div className="relative">
-          <h2 className="max-w-2xl font-display text-2xl font-bold text-primary-foreground sm:text-3xl">Early traction, measured honestly</h2>
+          <h2 className="max-w-2xl font-display text-2xl font-bold text-primary-foreground sm:text-3xl">
+            Early traction, measured honestly
+          </h2>
           <StaggerGroup className="mt-10 grid gap-8 sm:grid-cols-3">
             {stats.map((s) => (
               <StaggerItem key={s.label}>

@@ -8,16 +8,33 @@ export const PageHero = ({ eyebrow, title, subtitle, children, align = "center" 
     <div className="pointer-events-none absolute inset-0 -z-10 bg-grid mask-fade-b opacity-40" />
     <div className="container-xl">
       <div className={cn("max-w-3xl", align === "center" && "mx-auto text-center")}>
-        {eyebrow && <Reveal><Eyebrow>{eyebrow}</Eyebrow></Reveal>}
+        {eyebrow && (
+          <Reveal>
+            <Eyebrow>{eyebrow}</Eyebrow>
+          </Reveal>
+        )}
         <Reveal delay={0.05}>
-          <h1 className="mt-5 font-display text-4xl font-bold leading-[1.08] tracking-tight text-foreground sm:text-5xl lg:text-6xl">{title}</h1>
+          <h1 className="mt-5 font-display text-4xl font-bold leading-[1.08] tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+            {title}
+          </h1>
         </Reveal>
         {subtitle && (
           <Reveal delay={0.1}>
-            <p className={cn("mt-5 text-base leading-relaxed text-muted-foreground sm:text-lg", align === "center" && "mx-auto max-w-2xl")}>{subtitle}</p>
+            <p
+              className={cn(
+                "mt-5 text-base leading-relaxed text-muted-foreground sm:text-lg",
+                align === "center" && "mx-auto max-w-2xl",
+              )}
+            >
+              {subtitle}
+            </p>
           </Reveal>
         )}
-        {children && <Reveal delay={0.15}><div className="mt-8">{children}</div></Reveal>}
+        {children && (
+          <Reveal delay={0.15}>
+            <div className="mt-8">{children}</div>
+          </Reveal>
+        )}
       </div>
     </div>
   </section>

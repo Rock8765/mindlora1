@@ -2,7 +2,12 @@ import { Reveal } from "@/components/common/Reveal";
 import { cn } from "@/lib/utils";
 
 export const Eyebrow = ({ children, className = "" }) => (
-  <span className={cn("inline-flex items-center gap-2 rounded-full border border-border bg-secondary px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary", className)}>
+  <span
+    className={cn(
+      "inline-flex items-center gap-2 rounded-full border border-border bg-secondary px-3.5 py-1.5 text-xs font-semibold uppercase tracking-wider text-primary",
+      className,
+    )}
+  >
     {children}
   </span>
 );
@@ -21,7 +26,9 @@ export const SectionHeading = ({ eyebrow, title, subtitle, center = true, classN
     </Reveal>
     {subtitle && (
       <Reveal delay={0.1}>
-        <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">{subtitle}</p>
+        <p className="mt-4 text-base leading-relaxed text-muted-foreground sm:text-lg">
+          {subtitle}
+        </p>
       </Reveal>
     )}
   </div>

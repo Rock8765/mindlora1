@@ -1,0 +1,6 @@
+{
+  "name": "Mindlora",
+  "description": "AI recruitment and interview platform for automated candidate screening, technical evaluations, and scorecards.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

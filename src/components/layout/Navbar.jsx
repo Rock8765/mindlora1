@@ -27,24 +27,32 @@ export const Navbar = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  useEffect(() => { setMobileOpen(false); }, [location.pathname]);
+  useEffect(() => {
+    setMobileOpen(false);
+  }, [location.pathname]);
 
   const { scrollYProgress } = useScroll();
   const progress = useSpring(scrollYProgress, { stiffness: 120, damping: 24, restDelta: 0.001 });
 
   return (
     <header className="fixed inset-x-0 top-0 z-50">
-      <motion.div style={{ scaleX: progress }} className="absolute inset-x-0 top-0 h-0.5 origin-left bg-gradient-brand" />
+      <motion.div
+        style={{ scaleX: progress }}
+        className="absolute inset-x-0 top-0 h-0.5 origin-left bg-gradient-brand"
+      />
       <div className="container-xl">
         <div
           className={cn(
             "mt-3 flex h-16 items-center justify-between rounded-2xl px-4 transition-all duration-300",
-            scrolled ? "glass shadow-card" : "bg-transparent"
+            scrolled ? "glass shadow-card" : "bg-transparent",
           )}
         >
           <Logo />
 
-          <nav aria-label="Main navigation" className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-1 rounded-full border border-border/60 bg-background/60 p-1 backdrop-blur lg:flex">
+          <nav
+            aria-label="Main navigation"
+            className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-1 rounded-full border border-border/60 bg-background/60 p-1 backdrop-blur lg:flex"
+          >
             {links.map((it) => (
               <Link
                 key={it.to}
@@ -63,8 +71,13 @@ export const Navbar = () => {
               <Link to="/login">Login</Link>
             </Button>
             <MagneticButton>
-              <Button asChild className="rounded-xl bg-gradient-primary shadow-xs transition-all hover:shadow-glow">
-                <Link to="/book-meeting"><CalendarCheck className="h-4 w-4" /> Book a meeting</Link>
+              <Button
+                asChild
+                className="rounded-xl bg-gradient-primary shadow-xs transition-all hover:shadow-glow"
+              >
+                <Link to="/book-meeting">
+                  <CalendarCheck className="h-4 w-4" /> Book a meeting
+                </Link>
               </Button>
             </MagneticButton>
           </div>
@@ -73,23 +86,40 @@ export const Navbar = () => {
           <div className="lg:hidden">
             <Sheet open={mobileOpen} onOpenChange={setMobileOpen}>
               <SheetTrigger asChild>
-                <Button variant="outline" size="icon" className="rounded-xl border-border" aria-label="Open menu">
+                <Button
+                  variant="outline"
+                  size="icon"
+                  className="rounded-xl border-border"
+                  aria-label="Open menu"
+                >
                   <Menu className="h-5 w-5" />
                 </Button>
               </SheetTrigger>
               <SheetContent side="right" className="w-[86%] max-w-sm overflow-y-auto">
                 <SheetHeader>
-                  <SheetTitle className="text-left"><Logo /></SheetTitle>
+                  <SheetTitle className="text-left">
+                    <Logo />
+                  </SheetTitle>
                 </SheetHeader>
                 <div className="mt-6 space-y-6">
                   <div className="space-y-1">
                     {[...links, { label: "Contact", to: "/contact" }].map((it) => (
-                      <Link key={it.to} to={it.to} className="block rounded-xl p-2.5 text-sm font-medium text-foreground transition-colors hover:bg-secondary">{it.label}</Link>
+                      <Link
+                        key={it.to}
+                        to={it.to}
+                        className="block rounded-xl p-2.5 text-sm font-medium text-foreground transition-colors hover:bg-secondary"
+                      >
+                        {it.label}
+                      </Link>
                     ))}
                   </div>
                   <div className="flex flex-col gap-2 pt-2">
-                    <Button asChild variant="outline" className="w-full rounded-xl"><Link to="/login">Login</Link></Button>
-                    <Button asChild className="w-full rounded-xl bg-gradient-primary"><Link to="/book-meeting">Book a meeting</Link></Button>
+                    <Button asChild variant="outline" className="w-full rounded-xl">
+                      <Link to="/login">Login</Link>
+                    </Button>
+                    <Button asChild className="w-full rounded-xl bg-gradient-primary">
+                      <Link to="/book-meeting">Book a meeting</Link>
+                    </Button>
                   </div>
                 </div>
               </SheetContent>

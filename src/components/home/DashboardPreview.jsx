@@ -4,7 +4,15 @@ import { CheckCircle2, TrendingUp, Mic, Sparkles } from "lucide-react";
 import { AnimatedCounter } from "@/components/common/AnimatedCounter";
 
 const data = [
-  { v: 42 }, { v: 55 }, { v: 49 }, { v: 63 }, { v: 71 }, { v: 68 }, { v: 82 }, { v: 88 }, { v: 94 },
+  { v: 42 },
+  { v: 55 },
+  { v: 49 },
+  { v: 63 },
+  { v: 71 },
+  { v: 68 },
+  { v: 82 },
+  { v: 88 },
+  { v: 94 },
 ];
 
 const skills = [
@@ -22,17 +30,23 @@ export const DashboardPreview = () => (
         <span className="h-3 w-3 rounded-full bg-warning/80" />
         <span className="h-3 w-3 rounded-full bg-success/80" />
       </div>
-      <span className="rounded-md bg-secondary px-2 py-1 text-[11px] font-medium text-muted-foreground">mindlora.com / dashboard</span>
-      <span className="inline-flex items-center gap-1 rounded-md bg-success/10 px-2 py-1 text-[11px] font-semibold text-success"><span className="h-1.5 w-1.5 rounded-full bg-success" /> Live</span>
+      <span className="rounded-md bg-secondary px-2 py-1 text-[11px] font-medium text-muted-foreground">
+        mindlora.com / dashboard
+      </span>
+      <span className="inline-flex items-center gap-1 rounded-md bg-success/10 px-2 py-1 text-[11px] font-semibold text-success">
+        <span className="h-1.5 w-1.5 rounded-full bg-success" /> Live
+      </span>
     </div>
 
     <div className="grid gap-4 pt-4 sm:grid-cols-5">
       {/* Score card */}
       <div className="sm:col-span-2 rounded-2xl bg-gradient-primary p-5 text-primary-foreground shadow-glow">
         <p className="text-xs font-medium opacity-90">Candidate role fit</p>
-        <p className="mt-2 font-display text-4xl font-bold"><AnimatedCounter value={94} />%</p>
+        <p className="mt-2 font-display text-4xl font-bold">
+          <AnimatedCounter value={94} />%
+        </p>
         <div className="mt-3 inline-flex items-center gap-1 rounded-full bg-white/15 px-2.5 py-1 text-xs font-medium">
-           <TrendingUp className="h-3.5 w-3.5" /> Strong match
+          <TrendingUp className="h-3.5 w-3.5" /> Strong match
         </div>
         <div className="mt-5 h-16">
           <ResponsiveContainer width="100%" height="100%">
@@ -43,7 +57,13 @@ export const DashboardPreview = () => (
                   <stop offset="100%" stopColor="white" stopOpacity={0} />
                 </linearGradient>
               </defs>
-              <Area type="monotone" dataKey="v" stroke="white" strokeWidth={2.5} fill="url(#heroArea)" />
+              <Area
+                type="monotone"
+                dataKey="v"
+                stroke="white"
+                strokeWidth={2.5}
+                fill="url(#heroArea)"
+              />
             </AreaChart>
           </ResponsiveContainer>
         </div>
@@ -76,8 +96,13 @@ export const DashboardPreview = () => (
           ))}
         </div>
         <div className="mt-5 flex items-center gap-2 rounded-xl bg-secondary p-3">
-          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10 text-primary"><Mic className="h-4 w-4" /></span>
-          <p className="text-xs leading-snug text-muted-foreground"><span className="font-semibold text-foreground">Evidence:</span> Explained the trade-off clearly and handled two adaptive follow-ups.</p>
+          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary/10 text-primary">
+            <Mic className="h-4 w-4" />
+          </span>
+          <p className="text-xs leading-snug text-muted-foreground">
+            <span className="font-semibold text-foreground">Evidence:</span> Explained the trade-off
+            clearly and handled two adaptive follow-ups.
+          </p>
         </div>
       </div>
     </div>
@@ -85,7 +110,10 @@ export const DashboardPreview = () => (
     {/* Checklist row */}
     <div className="mt-4 grid grid-cols-3 gap-3">
       {["HR cleared", "Coding cleared", "Scorecard ready"].map((t) => (
-        <div key={t} className="flex items-center gap-2 rounded-xl border border-border bg-background px-3 py-2.5">
+        <div
+          key={t}
+          className="flex items-center gap-2 rounded-xl border border-border bg-background px-3 py-2.5"
+        >
           <CheckCircle2 className="h-4 w-4 shrink-0 text-success" />
           <span className="truncate text-xs font-medium text-foreground">{t}</span>
         </div>

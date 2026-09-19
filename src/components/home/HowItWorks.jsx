@@ -14,7 +14,13 @@ export const HowItWorks = () => (
       />
 
       <div className="relative mt-16">
-        <motion.div className="absolute left-6 top-0 hidden h-full w-px origin-top bg-primary/30 sm:block" initial={{ scaleY: 0 }} whileInView={{ scaleY: 1 }} viewport={{ once: true }} transition={{ duration: 1.2 }} />
+        <motion.div
+          className="absolute left-6 top-0 hidden h-full w-px origin-top bg-primary/30 sm:block"
+          initial={{ scaleY: 0 }}
+          whileInView={{ scaleY: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1.2 }}
+        />
         <div className="space-y-5">
           {howItWorks.map((s, i) => (
             <motion.div
@@ -33,7 +39,8 @@ export const HowItWorks = () => (
               </span>
               <div className="flex-1">
                 <div className="flex items-center gap-3">
-                  <span className="text-xs font-bold text-primary">{s.step}</span><h3 className="font-display text-lg font-semibold text-foreground">{s.title}</h3>
+                  <span className="text-xs font-bold text-primary">{s.step}</span>
+                  <h3 className="font-display text-lg font-semibold text-foreground">{s.title}</h3>
                 </div>
                 <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">{s.desc}</p>
               </div>
@@ -44,7 +51,10 @@ export const HowItWorks = () => (
 
       <p className="mt-10 text-sm text-muted-foreground">
         Want this workflow mapped to your roles?{" "}
-        <Link to="/book-meeting" className="font-semibold text-primary underline-offset-4 hover:underline">
+        <Link
+          to="/book-meeting"
+          className="font-semibold text-primary underline-offset-4 hover:underline"
+        >
           Book a meeting for a hiring quotation
         </Link>
         .

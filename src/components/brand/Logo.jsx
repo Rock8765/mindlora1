@@ -8,12 +8,18 @@ export const Logo = ({ className = "", to = "/", height = 42 }) => (
       src="/mindlora-logo.png"
       alt="Mindlora"
       style={{ height }}
-      width={height * 3} className="w-auto select-none transition-transform duration-300 will-change-transform hover:scale-[1.03]"
+      width={height * 3}
+      className="w-auto select-none transition-transform duration-300 will-change-transform hover:scale-[1.03]"
       draggable={false}
     />
   </Link>
 );
 
 export const LogoMark = ({ size = 34, className = "" }) => (
-  <img src="/mindlora-logo.png" alt="Mindlora" style={{ height: size }} className={cn("w-auto", className)} />
+  <img
+    src="/mindlora-logo.png"
+    alt="Mindlora"
+    style={{ height: size }}
+    className={cn("w-auto", className)}
+  />
 );
