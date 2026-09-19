@@ -6,3 +6,4 @@
 - [ ] Add purpose-built workflow, feature, testimonial, and security visuals
 - [ ] Rewrite stale pages and metadata for B2B recruitment interviewing
 - [ ] Verify search results, build health, and key pages on desktop/mobile
+- [ ] Add the Classet interview demo after written permission and an iframe-compatible or official Joy Embed URL are provided
